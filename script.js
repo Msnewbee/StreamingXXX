@@ -48,3 +48,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert('Terjadi kesalahan saat mengirim pesan.');
     });
 });
+
+// Memutar video saat dipilih
+function playVideo(videoCard) {
+    const iframe = videoCard.querySelector('iframe');
+    const src = iframe.src;
+
+    // Hentikan semua video yang sedang diputar
+    document.querySelectorAll('iframe').forEach(iframe => {
+        if (iframe.src !== src) {
+            iframe.src = iframe.src.replace('autoplay=1', 'autoplay=0');
+        }
+    });
+
+    // Mulai memutar video yang dipilih
+    iframe.src = src.replace('autoplay=0', 'autoplay=1');
+}
