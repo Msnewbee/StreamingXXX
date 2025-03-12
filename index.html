@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>StreamingXXX</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Video Streaming</h1>
+        <div class="video-container">
+            <!-- Video Pertama -->
+            <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/1dQFUI5b#k0zW1QEQAI787ZunaX2Dn41EeuWa7_9B4MQGOAN1DNs" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1>Kontak Kami</h1>
+        <form id="contact-form" action="send_email.php" method="POST">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
