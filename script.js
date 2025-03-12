@@ -2,19 +2,31 @@
 function verifyAge() {
     const birthdate = new Date(document.getElementById('birthdate').value);
     const today = new Date();
-    let age = today.getFullYear() - birthdate.getFullYear(); // Ganti const dengan let
+    let age = today.getFullYear() - birthdate.getFullYear();
     const monthDifference = today.getMonth() - birthdate.getMonth();
     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthdate.getDate())) {
-        age--; // Ini akan berfungsi karena age sekarang menggunakan let
+        age--;
     }
     if (age >= 18) {
         alert("Selamat datang! Anda dapat mengakses situs ini.");
         document.getElementById('age-verification').style.display = 'none';
         document.getElementById('content').style.display = 'block';
+        showSection('home'); // Tampilkan bagian Home secara default
     } else {
         alert("Maaf, Anda belum cukup umur untuk mengakses situs ini.");
         window.location.href = "https://www.google.com"; // Redirect ke halaman lain
     }
+}
+
+// Tampilkan bagian yang dipilih
+function showSection(sectionId) {
+    // Sembunyikan semua bagian
+    document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Tampilkan bagian yang dipilih
+    document.getElementById(sectionId).style.display = 'block';
 }
 
 // Form Kontak
