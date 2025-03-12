@@ -2,10 +2,10 @@
 function verifyAge() {
     const birthdate = new Date(document.getElementById('birthdate').value);
     const today = new Date();
-    const age = today.getFullYear() - birthdate.getFullYear();
+    let age = today.getFullYear() - birthdate.getFullYear(); // Ganti const dengan let
     const monthDifference = today.getMonth() - birthdate.getMonth();
     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthdate.getDate())) {
-        age--;
+        age--; // Ini akan berfungsi karena age sekarang menggunakan let
     }
     if (age >= 18) {
         alert("Selamat datang! Anda dapat mengakses situs ini.");
