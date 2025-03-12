@@ -23,8 +23,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Kontak</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,19 +33,28 @@
         <section id="home">
             <h1>Video Streaming</h1>
             <div class="video-container">
-                <!-- Video Pengujian -->
-         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-  <iframe src="https://geo.dailymotion.com/player.html?video=x9g017a"
+             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  <iframe src="https://geo.dailymotion.com/player.html?video=k6567iHkFqv8piCE9K0"
     style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
     allowfullscreen
     title="Dailymotion Video Player"
     allow="web-share">
   </iframe>
-</div>
+</div>   
+
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+  <iframe src="https://geo.dailymotion.com/player.html?video=x9g02yc"
+    style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
+    allowfullscreen
+    title="Dailymotion Video Player"
+    allow="web-share">
+  </iframe>
+</div
+            </div>
         </section>
 
         <!-- Kontak Section -->
-        <section id="contact">
+        <section id="contact" style="display: none;">
             <h1>Kontak Kami</h1>
             <form id="contact-form" action="send_email.php" method="POST">
                 <label for="name">Nama:</label>
